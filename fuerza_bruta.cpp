@@ -149,7 +149,7 @@ int main() {
     int distancia = distancia_minima(S1, S2, 0, 0, operaciones);
 
     auto end = high_resolution_clock::now();
-    auto duration = duration_cast<milliseconds>(end - start);
+    auto duration = duration_cast<microseconds>(end - start);
 
     cout << "Distancia mínima de edición (costo): " << distancia << endl;
     cout << "Operaciones realizadas:" << endl;
@@ -157,7 +157,7 @@ int main() {
         cout << "- " << operacion << endl;
     }
 
-    cout << "Tiempo de ejecución: " << duration.count() << " ms" << endl;
+    cout << "Tiempo de ejecución: " << duration.count() << " microsegundos" << endl;
 
     return 0;
 }
